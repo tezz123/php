@@ -58,6 +58,7 @@ else
   node['php']['packages'].each do |pkg|
     package pkg do
       action :install
+      version node['php']['version']
     end
   end
 end
